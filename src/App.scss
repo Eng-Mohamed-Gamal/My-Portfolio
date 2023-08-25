@@ -1,0 +1,52 @@
+
+*{
+    text-transform: capitalize;
+    box-sizing: border-box;
+    color: white;
+}
+
+:root{
+    --main-theme : hsl(252, 35%, 51%) ;
+    --theme-mode : black ;
+    --text-theme : white ;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: var(--theme-mode);
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+li{
+    list-style: none;
+}
+
+textarea,button{
+    border: none;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+li{
+    list-style: none;
+}
