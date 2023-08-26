@@ -46,6 +46,7 @@ textarea, button {
   top: 0px;
   overflow: hidden;
   padding-bottom: 40px;
+  z-index: 100;
 }
 .nav ul {
   width: 98%;
@@ -113,6 +114,113 @@ textarea, button {
   opacity: 1;
 }
 
-li {
-  list-style: none;
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-theme);
+  -webkit-transform: skewX(20deg) translateX(-75%);
+          transform: skewX(20deg) translateX(-75%);
+  width: 100%;
+  height: 100%;
+  z-index: -11;
+}
+.home .box {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+.home .box .cloud {
+  margin-top: 80px;
+  width: 250px;
+  height: 70px;
+  border-radius: 40px;
+  background-color: var(--text-theme);
+  -webkit-filter: drop-shadow(0px 0px 35px var(--text-theme));
+          filter: drop-shadow(0px 0px 35px var(--text-theme));
+  position: relative;
+}
+.home .box .cloud .char {
+  position: absolute;
+  bottom: -50px;
+  -webkit-animation: down 3s linear infinite;
+          animation: down 3s linear infinite;
+}
+.home .box .cloud h1 {
+  font-size: 300px;
+  color: aqua;
+  margin: 0%;
+}
+.home .box .cloud::before {
+  position: absolute;
+  content: "";
+  width: 110px;
+  height: 110px;
+  background-color: var(--text-theme);
+  border-radius: 50%;
+  -webkit-box-shadow: 40px -20px 0px var(--text-theme);
+          box-shadow: 40px -20px 0px var(--text-theme);
+  top: -40px;
+  left: 20%;
+}
+.home .con {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.home .con h1 {
+  margin: 0%;
+}
+.home .con p {
+  margin: 0%;
+}
+
+@-webkit-keyframes down {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  100% {
+    -webkit-transform: translateY(750px) scale(0);
+            transform: translateY(750px) scale(0);
+  }
+}
+
+@keyframes down {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  100% {
+    -webkit-transform: translateY(750px) scale(0);
+            transform: translateY(750px) scale(0);
+  }
 }
