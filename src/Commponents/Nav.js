@@ -12,12 +12,11 @@ useEffect(()=>{
             let y = e.offsetY;
             let btnWidth = btn.clientWidth
             let btnHeight = btn.clientHeight
-            let transx = ( btnWidth / 2   - x)
-            let transy = (btnHeight / 2 - y) 
+            let transx = ( x - btnWidth / 2  )
+            let transy = ( y - btnHeight / 2 ) 
             btn.style.transform = `translateX(${transx}px) translateY(${transy}px) `
 
             let pX =  e.pageX - btn.offsetLeft 
-            let pY =  e.pageY - btn.offseTop
             btn.style.setProperty("--x" , pX + "px")
     
         }

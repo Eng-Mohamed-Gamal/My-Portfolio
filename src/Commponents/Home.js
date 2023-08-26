@@ -1,49 +1,53 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useTypewriter } from 'react-simple-typewriter'
 
-function Random(){
-    let arr = "fsdfndjfbdjfkkjhk0123456789"
-    let random = arr.split("")[Math.floor(Math.random() * arr.split("").length  )]
-    return random;
-}
 
-
-function rain() {
-let e = document.createElement("div")
-e.classList.add("char");
-e.innerText = Random();
-document.querySelector(".cloud").appendChild(e)
-setTimeout(()=>{
-    document.querySelector(".cloud").removeChild(e)
-},1000)
-let left = Math.floor(Math.random() * 250)
-e.style.left = left + "px" ;
-let size =Math.floor( Math.random() * 60)
-e.style.fontSize= size + "px"
-}
+let string = "fsdfndjfbdjfkkjhk0123456789"
+let arr = []
 setInterval(()=>{
-rain()
-},20)
+        let random = string.split("")[Math.floor(Math.random() * string.split("").length  )]
+        let choose = random ;
+        arr.push(choose);
+        setTimeout(()=>{
+            arr.pop(choose)
+        },2000)
+    },20)
+
 
 export default function Home() {
+    const myRef = useRef()
+useEffect(()=>{
+        let ele = myRef.current
+        let left = Math.floor(Math.random() * 250)
+         let size =Math.floor( Math.random() * 60)
+         if(ele){
+             ele.style.fontSize = size + "px" ;
+             ele.style.left = left + "px" ;
+            }
+})
 
 const [text] = useTypewriter({
         words : ["front-end-developer"],
         loop : {}
     })
 
-
   return (
-<div className="home">
+<div className="home" id='Home'>
     <div className="box">
-        <div className="cloud">
+        <div className="cloud" >
+            {arr.map((str , index)=>{
+                return (
+                    <div className="char" key={index} ref={myRef} >
+                        {str}
+                    </div>
+                )
+            })}
         </div>
         <img src="assets/Me.jpg" alt="" />
     </div>
     <div className="con">
         <h1>i’m mohamed gamal</h1>
         <h2>  i’m  {text}</h2>
-   
     </div>
 </div>
   )
