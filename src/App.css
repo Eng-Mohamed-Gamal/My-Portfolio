@@ -89,7 +89,7 @@ textarea, button {
           justify-content: center;
   gap: 6px;
   border-radius: 20px;
-  border: 1px solid var(--main-theme);
+  border: 3px solid var(--main-theme);
 }
 .nav ul li a i {
   font-size: 20px;
@@ -138,17 +138,27 @@ textarea, button {
   z-index: -11;
 }
 .home .box {
-  height: 50vh;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.home .box img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 .home .box .cloud {
   margin-top: 80px;

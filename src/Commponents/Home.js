@@ -38,11 +38,12 @@ const [text] = useTypewriter({
     <div className="box">
         <div className="cloud">
         </div>
+        <img src="assets/Me.jpg" alt="" />
     </div>
     <div className="con">
-        <h1>i am mohamed gamal</h1>
+        <h1>i’m mohamed gamal</h1>
         <h2>  i’m  {text}</h2>
-        <p>i’m a egyptian front end developer focused on crafting clean & user-friendly experiences </p>
+   
     </div>
 </div>
   )

@@ -79,7 +79,7 @@ textarea,button{
             justify-content: center;
             gap: 6px;
             border-radius: 20px;
-            border: 1px solid var(--main-theme);
+            border: 3px solid var(--main-theme);
             i{
                 font-size: 20px;
             }
@@ -126,11 +126,18 @@ textarea,button{
         z-index: -11;
     }
     .box{
-        height: 50vh;
+        height: 60vh;
         display: flex;
-        align-items: flex-start;
-        justify-content: center;
+        align-items: center;
+        justify-content: flex-start;
         overflow: hidden;
+        flex-direction: column;
+        gap: 20px;
+        img{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
         .cloud{
             margin-top: 80px;
             width: 250px;
