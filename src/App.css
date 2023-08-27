@@ -189,8 +189,8 @@ button {
   bottom: -30px;
   -webkit-transition: 0.4s linear;
   transition: 0.4s linear;
-  -webkit-animation: down 3s linear infinite;
-          animation: down 3s linear infinite;
+  -webkit-animation: down 2s linear infinite;
+          animation: down 2s linear infinite;
 }
 .home .box .cloud h1 {
   font-size: 300px;
@@ -267,6 +267,9 @@ button {
     font-size: 19px;
   }
 }
+.about {
+  overflow: hidden;
+}
 .about .container .all {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,6 +284,146 @@ button {
 .about .container .all .col {
   text-align: center;
 }
+.about .container .all .col h3 {
+  font-size: 30px;
+}
 .about .container .all .col h3 span {
   color: var(--main-theme);
+}
+.about .container .skills {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.about .container .skills .box {
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 2s, 1s;
+          transition-duration: 2s, 1s;
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
+  opacity: 0;
+}
+.about .container .skills .box:nth-child(4) {
+  -webkit-transform: translateX(-400px);
+          transform: translateX(-400px);
+}
+.about .container .skills .box:nth-child(5) {
+  -webkit-transform: translateX(-400px);
+          transform: translateX(-400px);
+}
+.about .container .skills .box:nth-child(6) {
+  -webkit-transform: translateX(-400px);
+          transform: translateX(-400px);
+}
+.about .container .skills .box .go .circle {
+  width: 150px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background: conic-gradient(from 0deg, var(--main-theme) 0%, var(--main-theme) 0% var(--i), #999 var(--i), #555 100%);
+  border-radius: 50%;
+}
+.about .container .skills .box .go .circle h3 {
+  font-size: 30px;
+  position: relative;
+}
+.about .container .skills .box .go .circle::before {
+  position: absolute;
+  content: "";
+  background-color: var(--theme-mode);
+  inset: 10px;
+  border-radius: 50%;
+}
+.about .container .skills .box .go .circle::after {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 90px;
+  border: 10px solid var(--main-theme);
+  border-radius: 50%;
+  -webkit-animation: 2s trans infinite linear;
+          animation: 2s trans infinite linear;
+}
+.about .container .skills .box h3 {
+  font-size: 25px;
+}
+
+.observe {
+  -webkit-transform: translateX(0px) !important;
+          transform: translateX(0px) !important;
+  opacity: 1 !important;
+}
+
+@-webkit-keyframes trans {
+  50% {
+    -webkit-transform: rotateX(120deg) skewX(40deg);
+            transform: rotateX(120deg) skewX(40deg);
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+}
+
+@keyframes trans {
+  50% {
+    -webkit-transform: rotateX(120deg) skewX(40deg);
+            transform: rotateX(120deg) skewX(40deg);
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+}
+@media (max-width: 400px) {
+  .about .container .skills {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+@media (max-width: 500px) {
+  .about .container .all .col h3 {
+    font-size: 23px;
+  }
+  .about .container .skills .box {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+  .about .container .skills .box:nth-child(4) {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  .about .container .skills .box:nth-child(5) {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  .about .container .skills .box:nth-child(6) {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
 }

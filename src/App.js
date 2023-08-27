@@ -3,6 +3,7 @@ import './App.css';
 import About from './Commponents/About';
 import Home from './Commponents/Home';
 import Nav from './Commponents/Nav';
+import Port from './Commponents/Port';
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <Nav></Nav>
       <Home></Home>
       <h1 className="cen">about <span>me</span></h1>
-      <About></About>
+      <About></About> 
+      <h1 className="cen">my <span>portfilio</span></h1>
+      <Port></Port>
     </div>
   );
 }
