@@ -5,6 +5,7 @@ import Contact from './Commponents/Contact';
 import Home from './Commponents/Home';
 import Nav from './Commponents/Nav';
 import Port from './Commponents/Port';
+import Switcher from './Commponents/Switcher';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Port></Port>
       <h1 className="cen"><span>contact</span> me</h1>
       <Contact></Contact>
+      <Switcher></Switcher>
     </div>
   );
 }

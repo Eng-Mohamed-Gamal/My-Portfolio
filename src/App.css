@@ -777,3 +777,87 @@ button, input {
 .contact .container form .area:focus {
   border: 2px solid var(--main-theme);
 }
+
+.switcher .go {
+  position: fixed;
+  top: 100px;
+  left: 0px;
+  background-color: var(--text-theme);
+  width: 250px;
+  padding: 0px 20px;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.switcher.trans0 .go {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+.switcher .open {
+  width: 40px;
+  border-radius: 6px;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  background-color: var(--text-theme);
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  cursor: pointer;
+}
+.switcher .open i {
+  color: var(--theme-mode);
+}
+.switcher .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.switcher .title h2 {
+  color: var(--theme-mode);
+}
+.switcher .title i {
+  font-size: 28px;
+  color: var(--theme-mode);
+  cursor: pointer;
+}
+.switcher .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 10px;
+}
+.switcher .colors .box {
+  width: 40px;
+  cursor: pointer;
+}
+.switcher .back-ground {
+  margin: 10px 0px;
+  height: 60px;
+}
+.switcher .back-ground button {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-theme);
+  font-size: 27px;
+  border-radius: 10px;
+}
