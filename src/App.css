@@ -46,13 +46,9 @@ li {
 }
 
 textarea,
-button {
+button, input {
   border: none;
   outline: none;
-}
-
-.App {
-  min-height: 20000px;
 }
 
 .nav {
@@ -494,8 +490,8 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
   transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 1.5s, 6s;
-          transition-duration: 1.5s, 6s;
+  -webkit-transition-duration: 1.5s, 4s;
+          transition-duration: 1.5s, 4s;
   -webkit-transform: scale(0);
           transform: scale(0);
   opacity: 0;
@@ -658,4 +654,123 @@ button {
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
+}
+.contact .container {
+  gap: 20px;
+}
+.contact .container .col {
+  margin-bottom: 40px;
+}
+.contact .container .col h2, .contact .container .col p {
+  margin-top: 0px;
+  text-align: center;
+}
+.contact .container .col .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2%;
+}
+.contact .container .col .links a {
+  width: 290px;
+  background-color: var(--main-theme);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+.contact .container .col .links a i {
+  font-size: 28px;
+}
+.contact .container form button {
+  background-color: var(--theme-mode);
+  border: 1px solid var(--main-theme);
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 30px auto;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.contact .container form button .send {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0%;
+  border-radius: 50%;
+  background-color: var(--main-theme);
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  z-index: -1;
+}
+.contact .container form button:hover .send {
+  -webkit-box-shadow: 0px 0px 0px 300px var(--main-theme);
+          box-shadow: 0px 0px 0px 300px var(--main-theme);
+}
+.contact .container form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+.contact .container form .inputs input {
+  height: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 350px;
+          flex: 1 1 350px;
+  border-radius: 20px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  background-color: #333;
+}
+.contact .container form .inputs input:focus {
+  border: 2px solid var(--main-theme);
+}
+.contact .container form .area {
+  background-color: #333;
+  resize: none;
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.contact .container form .area:focus {
+  border: 2px solid var(--main-theme);
 }

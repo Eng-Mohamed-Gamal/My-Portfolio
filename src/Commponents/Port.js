@@ -40,7 +40,7 @@ export default function Port() {
   useEffect(()=>{
     let arr = myRef.current.childNodes
     const options = {
-      rootMargin : "-250px 0px -300px 0px"
+      rootMargin : "-350px 0px -300px 0px"
     }
     const observer = new IntersectionObserver((boxs)=>{
       boxs.forEach((box)=>{
