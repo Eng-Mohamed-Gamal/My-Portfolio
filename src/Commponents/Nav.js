@@ -16,8 +16,6 @@ useEffect(()=>{
             let transy = ( y - btnHeight / 2 ) 
             btn.style.transform = `translateX(${transx}px) translateY(${transy}px) `
 
-            let pX =  e.pageX - btn.offsetLeft 
-            btn.style.setProperty("--x" , pX + "px")
     
         }
         btn.onmouseout = ()=>{

@@ -58,22 +58,21 @@ button {
 
 .nav {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0px;
-  overflow: hidden;
-  padding-bottom: 40px;
+  right: 30px;
   z-index: 100;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--theme-mode);
   ul {
-    width: 98%;
     padding: 0%;
     margin: 0%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 30px;
-
     li {
       position: relative;
       transition: $tra;
@@ -88,27 +87,21 @@ button {
         justify-content: center;
         gap: 6px;
         border-radius: 20px;
-        border: 3px solid #999;
+        border: 3px solid var(--main-theme);
         i {
           font-size: 20px;
         }
       }
-      &::before {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        background-color: var(--main-theme);
-        width: 80px;
-        height: 80px;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        top: 50%;
-        left: var(--x);
-        opacity: 0;
-        transition: $tra;
-      }
-      &:hover::before {
-        opacity: 1;
+
+    }
+  }
+}
+@media (max-width : 450px){
+  .nav{
+    ul{
+      li{
+        width: 50px;
+        height: 50px;
       }
     }
   }
@@ -220,15 +213,36 @@ button {
 // Home
 
 // About
+
+
 .about {
   overflow: hidden;
   .container {
+    &.animate h3{
+      animation: flip 1s linear infinite;
+    }
+    button{
+      display: block;
+      background-color: var(--main-theme);
+      padding: 20px;
+      margin: 10px auto;
+      text-align: center;
+      width: 250px;
+      font-weight: bold;
+      font-size: 23px;
+      border-radius: 20px;
+      cursor: pointer;
+      &.stop{
+        display: none;
+      }
+    }
     .all {
       display: flex;
       justify-content: center;
       gap: 40px;
       flex-wrap: wrap;
       .col {
+        
         text-align: center;
         h3 {
           font-size: 30px;
@@ -320,6 +334,12 @@ button {
     transform: rotateX(180deg);
   }
 }
+@keyframes flip {
+
+  70% {
+    transform: rotateX(180deg) skewx(30deg)  ;
+  }
+}
 
 @media (max-width: 400px) {
   .about {
@@ -361,48 +381,159 @@ button {
 
 // Portfolio
 
+
+
+
 .port{
   .container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    align-items: flex-start;
     gap: 20px;
-    .box{
-      position: relative;
+.all{
+  &.observe-2 .box{
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+  .box{
+    border-radius: 20px;
+    transition-property: transform , opacity ;
+    transition-duration: 1s , 0.2s  ;
+    transform: scaleY(0);
+    // opacity: 0;
+    img.one{
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
       cursor: pointer;
-      img{
-        border-radius: 20px;
-        width: 100%;
-        height: 100%;
-        z-index: 15;
+    }
+    .absolute{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: var(--main-theme);
+      top: 0%;
+      left: 0%;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: $tra;
+      cursor: pointer;
+    }
+     &:hover   .absolute{
+      opacity: 1;
+    }
+  }
+}
+
+    .pop{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 100;
+      transform: translate(-50% , -50%);
+      width: 400px;
+      height: 400px;
+      background-color: #999;
+      padding: 20px;
+      text-align: center;
+      border-radius: 20px;
+      .card{
         position: relative;
-      }
-      .absolute{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: var(--main-theme);
-        top: 0%;
-        left: 0%;
-        border-radius: 20px;
+        width: 200px;
+        height: 200px;
+        margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 0;
-        transition: $tra;
-        cursor: pointer;
+        .face{
+          backface-visibility: hidden;
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: $tra;
+          border-radius: 50%;
+        }
+
+        .back{
+          transform: rotateY(180deg);
+          background-color: var(--main-theme);
+          animation: root2 2s    ease-out  infinite;
+        }
+
+        & .front{
+          animation: root 2s   ease-out  infinite;
+        }
+
+        img{
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+        }
       }
-         img:hover  ~ .absolute{
-        opacity: 1;
+      a{
+        margin-top: 30px;
+        font-weight: bold;
+        span{
+          color: var(--main-theme);
+        }
       }
-    }
+
+      i{
+          position: absolute;
+          top: 20px;
+          right: 10px;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--text-theme);
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 20px;
+          border: 1px solid #dddd ;
+      }
+      
+      }
   }
 }
 
 @media (max-width: 400px) {
   .port {
     .container {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     }
+  }
+}
+@media (max-width: 450px) {
+  .port {
+    .container {
+      .all{
+        .pop{
+  
+            width: 270px;
+            height: 450px;
+        
+        }
+      }
+    }
+  }
+}
+
+@keyframes root{
+  50%{
+    transform: rotateY(180deg);
+  }
+}
+@keyframes root2{
+  50%{
+    transform: rotateY(360deg);
   }
 }
 
