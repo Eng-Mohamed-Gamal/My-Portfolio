@@ -655,6 +655,9 @@ button ,input {
           padding-left: 10px;
           margin-bottom: 10px;
           background-color: #333;
+          &:nth-child(2){
+            text-transform: lowercase;
+          }
           &:focus{
           border: 2px solid var(--main-theme) ;
         }

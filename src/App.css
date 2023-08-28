@@ -760,6 +760,9 @@ button, input {
   margin-bottom: 10px;
   background-color: #333;
 }
+.contact .container form .inputs input:nth-child(2) {
+  text-transform: lowercase;
+}
 .contact .container form .inputs input:focus {
   border: 2px solid var(--main-theme);
 }
