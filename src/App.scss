@@ -215,37 +215,40 @@ button {
 // About
 
 
+
 .about {
   overflow: hidden;
   .container {
-    &.animate h3{
-      animation: flip 1s linear infinite;
-    }
-    button{
-      display: block;
-      background-color: var(--main-theme);
-      padding: 20px;
-      margin: 10px auto;
-      text-align: center;
-      width: 250px;
-      font-weight: bold;
-      font-size: 23px;
-      border-radius: 20px;
-      cursor: pointer;
-      &.stop{
-        display: none;
-      }
-    }
     .all {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 40px;
-      flex-wrap: wrap;
       .col {
-        
+        &:nth-child(1){
+          h3{
+            transform: translateX(-100%) ;
+          }
+        }
+        &:nth-child(2){
+          h3{
+            transform: translateX(100%) ;
+          }
+        }
         text-align: center;
         h3 {
-          font-size: 30px;
+          width: 390px;
+          font-size: 26px;
+          border: 1px solid var(--text-theme);
+          padding: 10px;
+          border-radius: 10px;
+          transition-property: transform , opacity ;
+          transition-duration: 1.5s , 1s  ;
+          opacity: 0;
+          &.noTrans {
+            transform: translateX(0%);
+            opacity: 1;
+          }
           span {
             color: var(--main-theme);
           }
@@ -255,13 +258,17 @@ button {
     .skills {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
       .box {
+        padding-top: 30px;
+        border-radius: 20px;
+        border: 1px solid var(--text-theme);
         height: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
         transition-property: transform , opacity;
         transition-duration: 2s ,1s;
         transform: translateX(400px);
@@ -292,6 +299,7 @@ button {
             ); 
             border-radius: 50%;
             h3 {
+              
               font-size: 30px;
               position: relative;
             }
@@ -336,8 +344,8 @@ button {
 }
 @keyframes flip {
 
-  70% {
-    transform: rotateX(180deg) skewx(30deg)  ;
+  50% {
+    transform: rotateX(180deg)  ;
   }
 }
 
@@ -350,6 +358,7 @@ button {
     }
   }
 }
+
 @media (max-width: 500px) {
   .about {
     .container {
@@ -377,6 +386,39 @@ button {
     }
   }
 }
+
+
+
+@media (max-width: 855px) {
+  .about {
+    .container {
+    .all{
+      flex-direction: column;
+      gap: 0px ;
+      .col{
+        h3{
+          margin: 15px;
+        }
+      }
+    }
+  }
+}
+}
+@media (max-width: 450px) {
+  .about {
+    .container {
+    .all{
+      .col{
+        h3{
+          font-size: 22px;
+          width: 270px;
+        }
+      }
+    }
+  }
+}
+}
+
 // About
 
 // Portfolio
@@ -398,9 +440,9 @@ button {
   .box{
     border-radius: 20px;
     transition-property: transform , opacity ;
-    transition-duration: 1s , 0.2s  ;
-    transform: scaleY(0);
-    // opacity: 0;
+    transition-duration: 1.5s , 6s  ;
+    transform: scale(0);
+    opacity: 0;
     img.one{
       border-radius: 20px;
       width: 100%;

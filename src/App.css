@@ -258,25 +258,6 @@ button {
 .about {
   overflow: hidden;
 }
-.about .container.animate h3 {
-  -webkit-animation: flip 1s linear infinite;
-          animation: flip 1s linear infinite;
-}
-.about .container button {
-  display: block;
-  background-color: var(--main-theme);
-  padding: 20px;
-  margin: 10px auto;
-  text-align: center;
-  width: 250px;
-  font-weight: bold;
-  font-size: 23px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.about .container button.stop {
-  display: none;
-}
 .about .container .all {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,15 +265,40 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 40px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 .about .container .all .col {
   text-align: center;
 }
+.about .container .all .col:nth-child(1) h3 {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.about .container .all .col:nth-child(2) h3 {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
 .about .container .all .col h3 {
-  font-size: 30px;
+  width: 390px;
+  font-size: 26px;
+  border: 1px solid var(--text-theme);
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 1.5s, 1s;
+          transition-duration: 1.5s, 1s;
+  opacity: 0;
+}
+.about .container .all .col h3.noTrans {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
 }
 .about .container .all .col h3 span {
   color: var(--main-theme);
@@ -301,8 +307,12 @@ button {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
 }
 .about .container .skills .box {
+  padding-top: 30px;
+  border-radius: 20px;
+  border: 1px solid var(--text-theme);
   height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,7 +327,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
@@ -409,15 +419,15 @@ button {
   }
 }
 @-webkit-keyframes flip {
-  70% {
-    -webkit-transform: rotateX(180deg) skewx(30deg);
-            transform: rotateX(180deg) skewx(30deg);
+  50% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
   }
 }
 @keyframes flip {
-  70% {
-    -webkit-transform: rotateX(180deg) skewx(30deg);
-            transform: rotateX(180deg) skewx(30deg);
+  50% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
   }
 }
 @media (max-width: 400px) {
@@ -446,6 +456,24 @@ button {
             transform: translateX(-150px);
   }
 }
+@media (max-width: 855px) {
+  .about .container .all {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0px;
+  }
+  .about .container .all .col h3 {
+    margin: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .about .container .all .col h3 {
+    font-size: 22px;
+    width: 270px;
+  }
+}
 .port .container {
   display: -ms-grid;
   display: grid;
@@ -466,10 +494,11 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
   transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 1s, 0.2s;
-          transition-duration: 1s, 0.2s;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
+  -webkit-transition-duration: 1.5s, 6s;
+          transition-duration: 1.5s, 6s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
 }
 .port .container .all .box img.one {
   border-radius: 20px;
