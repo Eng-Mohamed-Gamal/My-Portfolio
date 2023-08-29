@@ -794,6 +794,7 @@ button, input {
   transition: 0.4s linear;
   -webkit-transform: translateX(-101%);
           transform: translateX(-101%);
+  z-index: 200;
 }
 .switcher.trans0 .go {
   -webkit-transform: translateX(0px);

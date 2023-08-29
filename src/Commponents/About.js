@@ -81,7 +81,7 @@ export default function About() {
           </div>
         </div>
         <h1 className="cen">
-          <span>me</span> skills
+          <span>my</span> skills
         </h1>
         <div className="skills" ref={myRef}>
           <div className="box">

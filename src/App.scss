@@ -698,6 +698,7 @@ button ,input {
     padding: 0px 20px;
     transition:$tra;
     transform: translateX(-101%);
+    z-index: 200;
   }
   &.trans0 .go{
     transform: translateX(0px);
