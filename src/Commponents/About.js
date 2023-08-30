@@ -55,7 +55,7 @@ export default function About() {
               age : <span>20</span>
             </h3>
             <h3>
-              freelance : <span>availabel</span>
+              freelance : <span>available</span>
             </h3>
             <h3>
               phone : <span>(+20) 01012707504</span>
