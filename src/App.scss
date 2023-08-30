@@ -152,16 +152,15 @@ input {
       width: 250px;
       height: 70px;
       border-radius: 40px;
-      background-color: var(--main-theme);
-      filter: drop-shadow(0px 0px 35px var(--main-theme));
+      background-color: var(--text-theme);
+      filter: drop-shadow(0px 0px 35px var(--text-theme));
       position: relative;
       transform: translateY(35%);
       .char {
         position: absolute;
         bottom: -30px;
         transition: $tra;
-        animation: down 1s linear infinite;
-        color: var(--main-theme);
+        animation: down 2s linear infinite;
       }
       h1 {
         font-size: 300px;
@@ -173,9 +172,9 @@ input {
         content: "";
         width: 110px;
         height: 110px;
-        background-color: var(--main-theme);
+        background-color: var(--text-theme);
         border-radius: 50%;
-        box-shadow: 40px -20px 0px var(--main-theme);
+        box-shadow: 40px -20px 0px var(--text-theme);
         top: -40px;
         left: 20%;
       }
@@ -204,9 +203,9 @@ input {
   80% {
     transform: translateY(400px) scale(1);
   }
-
+  
   100% {
-    transform: translateY(450px) scale(0);
+    transform: translateY(750px) scale(0);
   }
 }
 
@@ -219,6 +218,16 @@ input {
       h2 {
         font-size: 19px;
       }
+    }
+  }
+}
+@media (max-width: 560px) {
+  .home {
+    &::before{
+      transform: skewX(20deg) translateX(-95%);
+    }
+    &::after{
+      transform: skewX(-20deg) translateX(95%);
     }
   }
 }
