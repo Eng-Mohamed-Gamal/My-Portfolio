@@ -51,7 +51,8 @@ li {
 }
 
 textarea,
-button, input {
+button,
+input {
   border: none;
   outline: none;
 }
@@ -122,14 +123,13 @@ button, input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  min-height: 100vh;
+  min-height: 50vh;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 .home::before {
   content: "";
@@ -141,8 +141,19 @@ button, input {
   height: 100%;
   z-index: -11;
 }
+.home::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-theme);
+  -webkit-transform: skewX(-20deg) translateX(75%);
+          transform: skewX(-20deg) translateX(75%);
+  width: 100%;
+  height: 100%;
+  z-index: -11;
+  right: 0;
+  top: 0;
+}
 .home .box {
-  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,9 +179,9 @@ button, input {
   width: 250px;
   height: 70px;
   border-radius: 40px;
-  background-color: var(--text-theme);
-  -webkit-filter: drop-shadow(0px 0px 35px var(--text-theme));
-          filter: drop-shadow(0px 0px 35px var(--text-theme));
+  background-color: var(--main-theme);
+  -webkit-filter: drop-shadow(0px 0px 35px var(--main-theme));
+          filter: drop-shadow(0px 0px 35px var(--main-theme));
   position: relative;
   -webkit-transform: translateY(35%);
           transform: translateY(35%);
@@ -180,8 +191,9 @@ button, input {
   bottom: -30px;
   -webkit-transition: 0.4s linear;
   transition: 0.4s linear;
-  -webkit-animation: down 2s linear infinite;
-          animation: down 2s linear infinite;
+  -webkit-animation: down 1s linear infinite;
+          animation: down 1s linear infinite;
+  color: var(--main-theme);
 }
 .home .box .cloud h1 {
   font-size: 300px;
@@ -193,10 +205,10 @@ button, input {
   content: "";
   width: 110px;
   height: 110px;
-  background-color: var(--text-theme);
+  background-color: var(--main-theme);
   border-radius: 50%;
-  -webkit-box-shadow: 40px -20px 0px var(--text-theme);
-          box-shadow: 40px -20px 0px var(--text-theme);
+  -webkit-box-shadow: 40px -20px 0px var(--main-theme);
+          box-shadow: 40px -20px 0px var(--main-theme);
   top: -40px;
   left: 20%;
 }
@@ -231,8 +243,8 @@ button, input {
             transform: translateY(400px) scale(1);
   }
   100% {
-    -webkit-transform: translateY(750px) scale(0);
-            transform: translateY(750px) scale(0);
+    -webkit-transform: translateY(450px) scale(0);
+            transform: translateY(450px) scale(0);
   }
 }
 
@@ -246,8 +258,8 @@ button, input {
             transform: translateY(400px) scale(1);
   }
   100% {
-    -webkit-transform: translateY(750px) scale(0);
-            transform: translateY(750px) scale(0);
+    -webkit-transform: translateY(450px) scale(0);
+            transform: translateY(450px) scale(0);
   }
 }
 @media (max-width: 360px) {
@@ -667,7 +679,8 @@ button, input {
 .contact .container .col {
   margin-bottom: 40px;
 }
-.contact .container .col h2, .contact .container .col p {
+.contact .container .col h2,
+.contact .container .col p {
   margin-top: 0px;
   text-align: center;
 }
