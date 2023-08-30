@@ -164,14 +164,16 @@ button, input {
   border-radius: 50%;
 }
 .home .box .cloud {
-  margin-top: 80px;
+  margin: 40px 0px;
   width: 250px;
-  height: 70px;
+  height: 100px;
   border-radius: 40px;
   background-color: var(--text-theme);
   -webkit-filter: drop-shadow(0px 0px 35px var(--text-theme));
           filter: drop-shadow(0px 0px 35px var(--text-theme));
   position: relative;
+  -webkit-transform: translateY(35%);
+          transform: translateY(35%);
 }
 .home .box .cloud .char {
   position: absolute;
@@ -311,7 +313,6 @@ button, input {
   gap: 20px;
 }
 .about .container .skills .box {
-  padding-top: 30px;
   border-radius: 20px;
   border: 1px solid var(--text-theme);
   height: 250px;
@@ -352,8 +353,8 @@ button, input {
           transform: translateX(-400px);
 }
 .about .container .skills .box .go .circle {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,11 +365,11 @@ button, input {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background: conic-gradient(from 0deg, var(--main-theme) 0%, var(--main-theme) 0% var(--i), #999 var(--i), #555 100%);
+  background: conic-gradient(from 0deg, var(--main-theme) 0%, var(--main-theme) 0% var(--i), #999 var(--i), #999 100%);
   border-radius: 50%;
 }
 .about .container .skills .box .go .circle h3 {
-  font-size: 30px;
+  font-size: 25px;
   position: relative;
 }
 .about .container .skills .box .go .circle::before {
@@ -381,9 +382,9 @@ button, input {
 .about .container .skills .box .go .circle::after {
   position: absolute;
   content: "";
-  width: 90px;
-  height: 90px;
-  border: 10px solid var(--main-theme);
+  width: 180px;
+  height: 180px;
+  border: 5px solid var(--main-theme);
   border-radius: 50%;
   -webkit-animation: 2s trans infinite linear;
           animation: 2s trans infinite linear;
@@ -400,23 +401,23 @@ button, input {
 
 @-webkit-keyframes trans {
   50% {
-    -webkit-transform: rotateX(120deg) skewX(40deg);
-            transform: rotateX(120deg) skewX(40deg);
+    -webkit-transform: rotateY(120deg);
+            transform: rotateY(120deg);
   }
   100% {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
   }
 }
 
 @keyframes trans {
   50% {
-    -webkit-transform: rotateX(120deg) skewX(40deg);
-            transform: rotateX(120deg) skewX(40deg);
+    -webkit-transform: rotateY(120deg);
+            transform: rotateY(120deg);
   }
   100% {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
   }
 }
 @-webkit-keyframes flip {

@@ -87,50 +87,50 @@ export default function About() {
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "100%" }}>
-                <h3>100%</h3>
+            <h3>html</h3>
+        
               </div>
             </div>
-            <h3>html</h3>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "90%" }}>
-                <h3>90%</h3>
+            <h3>sass</h3>
+            
               </div>
             </div>
-            <h3>sass</h3>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "80%" }}>
-                <h3>80%</h3>
+            <h3>react</h3>
+            
               </div>
             </div>
-            <h3>react</h3>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "50%" }}>
-                <h3>50%</h3>
+            <h3>redux&toolkit</h3>
+          
               </div>
             </div>
-            <h3>redux&toolkit</h3>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "60%" }}>
-                <h3>60%</h3>
+            <h3>git & github</h3>
+            
               </div>
             </div>
-            <h3>git & github</h3>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "100%" }}>
-                <h3>100%</h3>
+            <h3>css</h3>
+           
               </div>
             </div>
-            <h3>css</h3>
           </div>
         </div>
       </div>

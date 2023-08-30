@@ -140,13 +140,14 @@ button ,input {
       border-radius: 50%;
     }
     .cloud {
-      margin-top: 80px;
+      margin: 40px 0px;
       width: 250px;
-      height: 70px;
+      height: 100px;
       border-radius: 40px;
       background-color: var(--text-theme);
       filter: drop-shadow(0px 0px 35px var(--text-theme));
       position: relative;
+      transform: translateY(35%);
       .char {
         position: absolute;
         bottom: -30px;
@@ -262,7 +263,7 @@ button ,input {
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 20px;
       .box {
-        padding-top: 30px;
+  
         border-radius: 20px;
         border: 1px solid var(--text-theme);
         height: 250px;
@@ -286,8 +287,8 @@ button ,input {
         }
         .go {
           .circle {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -297,12 +298,11 @@ button ,input {
               var(--main-theme) 0%,
               var(--main-theme) 0% var(--i),
               #999 var(--i),
-              #555 100%
+              #999 100%
             ); 
             border-radius: 50%;
             h3 {
-              
-              font-size: 30px;
+              font-size: 25px;
               position: relative;
             }
             &::before {
@@ -315,9 +315,9 @@ button ,input {
             &::after {
               position: absolute;
               content: "";
-              width: 90px;
-              height: 90px;
-              border: 10px solid var(--main-theme);
+              width: 180px;
+              height: 180px;
+              border: 5px solid var(--main-theme);
               border-radius: 50%;
               animation: 2s trans infinite linear;
             }
@@ -338,10 +338,10 @@ button ,input {
 
 @keyframes trans {
   50% {
-    transform: rotateX(120deg) skewX(40deg);
+    transform: rotateY(120deg) ;
   }
   100% {
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
   }
 }
 @keyframes flip {
