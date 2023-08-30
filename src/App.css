@@ -374,8 +374,8 @@ input {
           transform: translateX(-400px);
 }
 .about .container .skills .box .go .circle {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
