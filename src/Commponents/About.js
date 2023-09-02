@@ -23,12 +23,10 @@ export default function About() {
       observer.observe(box);
     });
 
-
-    let arr2 = Array.from(myRef3.current.childNodes)
-    let arr3 = Array.from(myRef4.current.childNodes)
-    let bigArr = []
-    bigArr.push(...arr2 , ...arr3)
-
+    let arr2 = Array.from(myRef3.current.childNodes);
+    let arr3 = Array.from(myRef4.current.childNodes);
+    let bigArr = [];
+    bigArr.push(...arr2, ...arr3);
 
     const observer2 = new IntersectionObserver((boxs) => {
       boxs.forEach((box) => {
@@ -39,12 +37,16 @@ export default function About() {
     bigArr.forEach((box) => {
       observer2.observe(box);
     });
-
   }, []);
-
 
   return (
     <div className="about" id="About">
+      <div className="cv">
+        {" "}
+        <a href="assets/Me.pdf" target="blank" download={true}>
+          Dowload cv <i class="fa-solid fa-download fa-shake send"></i>{" "}
+        </a>{" "}
+      </div>
       <div className="container" ref={myRef2}>
         <div className="all">
           <div className="col" ref={myRef3}>
@@ -87,48 +89,42 @@ export default function About() {
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "100%" }}>
-            <h3>html</h3>
-        
+                <h3>html</h3>
               </div>
             </div>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "90%" }}>
-            <h3>sass</h3>
-            
+                <h3>sass</h3>
               </div>
             </div>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "80%" }}>
-            <h3>react</h3>
-            
+                <h3>react</h3>
               </div>
             </div>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "50%" }}>
-            <h3>redux&toolkit</h3>
-          
+                <h3>redux&toolkit</h3>
               </div>
             </div>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "60%" }}>
-            <h3>git & github</h3>
-            
+                <h3>git & github</h3>
               </div>
             </div>
           </div>
           <div className="box">
             <div className="go">
               <div className="circle" style={{ "--i": "100%" }}>
-            <h3>css</h3>
-           
+                <h3>css</h3>
               </div>
             </div>
           </div>
